@@ -89,34 +89,8 @@ def argmax(xs: list) -> int:
 def main():
     import random
     random.seed(0)
-    
-    # training data
-   # xs = [[0., 0], [0., 1], [1., 0], [1., 1]]
-   # ys = [[0.], [1.], [1.], [0.]]
-    
-    # start with random weights
-   # network = [ # hidden layer: 2 inputs -> 2 outputs
-               # [[random.random() for _ in range(2 + 1)],   # 1st hidden neuron
-                # [random.random() for _ in range(2 + 1)]],  # 2nd hidden neuron
-                # output layer: 2 inputs -> 1 output
-               # [[random.random() for _ in range(2 + 1)]]   # 1st output neuron
-            #  ]
-    
     from scratch.gradient_descent import gradient_step
     import tqdm
-    
-   # learning_rate = 1.0
-    
-  #  for epoch in tqdm.trange(20000, desc="neural net for xor"):
-       # for x, y in zip(xs, ys):
-           # gradients = sqerror_gradients(network, x, y)
-    
-            # Take a gradient step for each neuron in each layer
-           # network = [[gradient_step(neuron, grad, -learning_rate)
-          #              for neuron, grad in zip(layer, layer_grad)]
-                      # for layer, layer_grad in zip(network, gradients)]
-    
-    # check that it learned XOR
     
     xs = [binary_encode(n) for n in range(101, 1024)]
     ys = [fizz_buzz_encode(n) for n in range(101, 1024)]
